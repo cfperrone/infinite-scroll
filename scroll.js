@@ -9,8 +9,8 @@ var Scroll = function(card_func) {
     this.disappearanceBuffer = 100; // Number of pixels above top of page before removing a card
     this.initialCardCount = 5, // How many cards to init the environment with
 
-    this.container = $('.container'),
-    this.filler = $('.filler'),
+    this.container = $('#container'),
+    this.filler = $('#filler'),
 
     // Counter to track number of cards we've seen
     this.cardsThroughDom = 0,
@@ -21,7 +21,7 @@ var Scroll = function(card_func) {
 
         // Page scroll event
         $(window).scroll(function() {
-            $('.card').each(function() {
+            self.container.find('.card').each(function() {
                 var bottom = (this.offsetTop + this.offsetHeight);
                 if (bottom < window.pageYOffset - self.disappearanceBuffer) {
                     // Add a new element at the bottom of the page
