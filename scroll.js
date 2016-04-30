@@ -5,7 +5,7 @@
  * usage by removing invisible elements from the DOM.
  */
 
-var Scroll = function() {
+var Scroll = function(card_func) {
     this.disappearanceBuffer = 100; // Number of pixels above top of page before removing a card
     this.initialCardCount = 5, // How many cards to init the environment with
 
@@ -45,6 +45,9 @@ var Scroll = function() {
     // Creates a new card
     this.newCard = function() {
         this.cardsThroughDom++;
+        return this.newCardSub();
+    },
+    this.newCardSub = function() {
         return "<div class=\"card\" data-count=\"" + this.cardsThroughDom + "\"></div>";
     },
 
@@ -53,6 +56,11 @@ var Scroll = function() {
         var current_height = this.filler.height();
         this.filler.height(current_height + height);
     };
+
+    // Replace the new card generator if applicable
+    if (typeof card_func === 'function') {
+        this.newCardSub = card_func;
+    }
 
     return this.init();
 };
