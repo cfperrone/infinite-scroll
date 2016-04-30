@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="base.css" />
+    <style type="text/css">
+        body {
+            background-color: #CCC;
+        }
+        .card {
+            height: 300px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <div class="filler"></div>
+    <div class="container"></div>
+    <script type="text/javascript" src="scroll.js"></script>
+    <script>
+        new Scroll(function() {
+            var degs = [ 0, 10, 20, 30, 40, 50, 60, 70, 90, 110, 130, 140, 150, 160, 170, 180,
+                         190, 200, 210, 220, 240, 260, 280, 300, 310, 320, 330, 340, 350 ];
+            var index = Math.floor(Math.random() * (degs.length));
+            var deg = degs[index];
+                style = "background: linear-gradient(" + deg + "deg, #FF00FF 0%, #00FFFF 100%)";
+            return "<div class=\"card\" style=\"" + style + "\"></div>";
+        });
+    </script>
+</body>
+</html>
