@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css" />
+    <title>Version 3</title>
+    <style type="text/css">
+        #factory {
+            display: none;
+        }
+
+        .card {
+            border-bottom: 3px solid #AAA;
+            color: #AAA;
+        }
+        .card span {
+            display: inline-block;
+        }
+
+        /* Instagram Style */
+        .style1 {
+            height: 790px;
+        }
+            .style1 .header {
+                height: 100px;
+            }
+                .style1 .header .avatar {
+                    height: 80px;
+                    width: 80px;
+                    margin: 10px;
+                    background-color: #AAA;
+                    float: left;
+                    border-radius: 50%;
+                }
+                .style1 .header .text {
+                    margin: 25px 10px;
+                    font-size: 18pt;
+                }
+            .style1 .image {
+                background-color: #AAA;
+                width: 100%;
+                height: 600px;
+                margin: 20px 0;
+            }
+            .style1 .footer {
+                margin: 20px 0;
+                height: 30px;
+            }
+                .style1 .footer .button {
+                    height: 50px;
+                    width: 60px;
+                    text-align: center;
+                    margin-left: 20px;
+                }
+
+        /* Facebook Style */
+        .style2 {
+            height: 200px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <div id="filler"></div>
+    <div id="container"></div>
+    <div id="factory">
+        <div class="card style1">
+            <div class="header">
+                <span class="text">&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;</span>
+                <span class="avatar"></span>
+            </div>
+            <div class="image">
+            </div>
+            <div class="footer">
+                <div class="button fa fa-heart-o fa-2x"></div>
+                <div class="button fa fa-comment-o fa-2x"></div>
+                <div class="button fa fa-share-square-o fa-2x"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scroll.js"></script>
+    <script>
+        var sc = new Scroll(function() {
+            var el = $('#factory .style1').clone();
+            return $("<div class=\"card style1\" />").append(el).html();
+        });
+    </script>
+</body>
+</html>
