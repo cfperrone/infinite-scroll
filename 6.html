@@ -222,7 +222,6 @@
         var last_scroll = $(window).scrollTop();
         $(window).scroll(function() {
             var this_scroll = $(window).scrollTop();
-            console.log("This: " + this_scroll + " Last: " + last_scroll);
             if (Math.abs(this_scroll - last_scroll) > 1) {
                 updateGradient();
                 last_scroll = this_scroll;
