@@ -21,7 +21,7 @@ var step = 0;
 var colorIndices = [0,1,2,3];
 
 //transition speed
-var gradientSpeed = 0.002;
+var gradientSpeed = 0.02;
 
 function updateGradient()
 {
@@ -62,5 +62,3 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 
   }
 }
-
-setInterval(updateGradient,10);

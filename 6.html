@@ -1,0 +1,234 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="base.css" />
+    <title>Version 6</title>
+    <style type="text/css">
+        body {
+            background-color: #EEE;
+        }
+
+        #factory {
+            display: none;
+        }
+
+        .card {
+            /*border: 1px dashed #AAA;*/
+            color: #AAA;
+        }
+        .card span {
+            display: inline-block;
+        }
+
+        /* Instagram Style */
+        .style1 {
+            height: 820px;
+        }
+            .style1 > div {
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                padding: inherit;
+            }
+            .style1 .avatar {
+                -webkit-clip-path: circle(40px at 50px 50px);
+            }
+            .style1 .username {
+                -webkit-clip-path: polygon(115px 40px, 360px 40px, 360px 65px, 115px 65px);
+            }
+            .style1 .picture {
+                -webkit-clip-path: polygon(0 110px, 100% 110px, 100% 700px, 0% 700px);
+            }
+            .style1 .comment-icon {
+                -webkit-clip-path: polygon(10px 710px, 30px 710px, 30px 723px, 25px 723px, 25px 730px, 20px 723px, 10px 723px);
+            }
+            .style1 .comment-text {
+                -webkit-clip-path: polygon(50px 710px, 350px 710px, 350px 725px, 50px 725px);
+            }
+            .style1 .footer1 {
+                -webkit-clip-path: polygon(10px 750px, 150px 750px, 150px 780px, 10px 780px);
+            }
+            .style1 .footer2 {
+                -webkit-clip-path: polygon(170px 750px, 310px 750px, 310px 780px, 170px 780px);
+            }
+            .style1 .footer3 {
+                -webkit-clip-path: polygon(650px 750px, 100% 750px, 100% 780px, 650px 780px);
+            }
+
+        /* Facebook Style */
+        .style2 {
+            height: 350px;
+        }
+            .style2 > div {
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                padding: inherit;
+            }
+            .style2 .avatar {
+                -webkit-clip-path: polygon(10px 10px, 70px 10px, 70px 70px, 10px 70px);
+            }
+            .style2 .username {
+                -webkit-clip-path: polygon(85px 15px, 300px 15px, 300px 35px, 85px 35px);
+            }
+            .style2 .date {
+                -webkit-clip-path: polygon(85px 45px, 250px 45px, 250px 65px, 85px 65px);
+            }
+            .style2 .text-line1 {
+                -webkit-clip-path: polygon(10px 80px, 600px 80px, 600px 95px, 10px 95px);
+            }
+            .style2 .text-line2 {
+                -webkit-clip-path: polygon(10px 100px, 650px 100px, 650px 115px, 10px 115px);
+            }
+            .style2 .text-line3 {
+                -webkit-clip-path: polygon(10px 120px, 620px 120px, 620px 135px, 10px 135px);
+            }
+            .style2 .text-line4 {
+                -webkit-clip-path: polygon(10px 140px, 640px 140px, 640px 155px, 10px 155px);
+            }
+            .style2 .text-line5 {
+                -webkit-clip-path: polygon(10px 160px, 650px 160px, 650px 175px, 10px 175px);
+            }
+            .style2 .actions {
+                -webkit-clip-path: polygon(10px 190px, 200px 190px, 200px 220px, 10px 220px);
+            }
+            .style2 .line1 {
+                -webkit-clip-path: polygon(10px 230px, 100% 230px, 100% 231px, 10px 231px);
+            }
+            .style2 .like-icon {
+                -webkit-clip-path: circle(10px at 20px 250px);
+            }
+            .style2 .like-text {
+                -webkit-clip-path: polygon(40px 245px, 250px 245px, 250px 255px, 40px 255px);
+            }
+            .style2 .comment-avatar {
+                -webkit-clip-path: polygon(10px 270px, 50px 270px, 50px 310px, 10px 310px);
+            }
+            .style2 .comment-username {
+                -webkit-clip-path: polygon(60px 275px, 120px 275px, 120px 285px, 60px 285px);
+            }
+            .style2 .comment-text {
+                -webkit-clip-path: polygon(130px 275px, 350px 275px, 350px 285px, 130px 285px);
+            }
+            .style2 .comment-footer {
+                -webkit-clip-path: polygon(60px 295px, 200px 295px, 200px 305px, 60px 305px);
+            }
+
+        /* Facebook Style - without comment */
+        .style3 {
+            height: 300px;
+        }
+            .style3 > div {
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                padding: inherit;
+            }
+            .style3 .avatar {
+                -webkit-clip-path: polygon(10px 10px, 70px 10px, 70px 70px, 10px 70px);
+            }
+            .style3 .username {
+                -webkit-clip-path: polygon(85px 15px, 300px 15px, 300px 35px, 85px 35px);
+            }
+            .style3 .date {
+                -webkit-clip-path: polygon(85px 45px, 250px 45px, 250px 65px, 85px 65px);
+            }
+            .style3 .text-line1 {
+                -webkit-clip-path: polygon(10px 80px, 600px 80px, 600px 95px, 10px 95px);
+            }
+            .style3 .text-line2 {
+                -webkit-clip-path: polygon(10px 100px, 650px 100px, 650px 115px, 10px 115px);
+            }
+            .style3 .text-line3 {
+                -webkit-clip-path: polygon(10px 120px, 620px 120px, 620px 135px, 10px 135px);
+            }
+            .style3 .text-line4 {
+                -webkit-clip-path: polygon(10px 140px, 640px 140px, 640px 155px, 10px 155px);
+            }
+            .style3 .actions {
+                -webkit-clip-path: polygon(10px 160px, 200px 160px, 200px 190px, 10px 190px);
+            }
+            .style3 .line1 {
+                -webkit-clip-path: polygon(10px 200px, 100% 200px, 100% 201px, 10px 201px);
+            }
+            .style3 .like-icon {
+                -webkit-clip-path: circle(10px at 20px 220px);
+            }
+            .style3 .like-text {
+                -webkit-clip-path: polygon(40px 215px, 250px 215px, 250px 225px, 40px 225px);
+            }
+    </style>
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <div id="filler"></div>
+    <div id="container"></div>
+    <div id="factory">
+        <div class="card style1">
+            <div class="avatar"></div>
+            <div class="username"></div>
+            <div class="picture"></div>
+            <div class="comment-icon"></div>
+            <div class="comment-text"></div>
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <div class="card style2">
+            <div class="avatar"></div>
+            <div class="username"></div>
+            <div class="date"></div>
+            <div class="text-line1"></div>
+            <div class="text-line2"></div>
+            <div class="text-line3"></div>
+            <div class="text-line4"></div>
+            <div class="text-line5"></div>
+            <div class="actions"></div>
+            <div class="line1"></div>
+            <div class="like-icon"></div>
+            <div class="like-text"></div>
+            <div class="comment-avatar"></div>
+            <div class="comment-username"></div>
+            <div class="comment-text"></div>
+            <div class="comment-footer"></div>
+        </div>
+        <div class="card style3">
+            <div class="avatar"></div>
+            <div class="username"></div>
+            <div class="date"></div>
+            <div class="text-line1"></div>
+            <div class="text-line2"></div>
+            <div class="text-line3"></div>
+            <div class="text-line4"></div>
+            <div class="actions"></div>
+            <div class="line1"></div>
+            <div class="like-icon"></div>
+            <div class="like-text"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scroll.js"></script>
+    <script type="text/javascript" src="animated-background-scroll.js"></script>
+    <script>
+        var sc = new Scroll(function() {
+            var classes = [ 'style1', 'style2', 'style3' ],
+                style = classes[Math.floor(Math.random() * 3)];
+
+            var el = $('#factory .' + style).clone();
+            return $("<div class=\"card " + style + "\" />").append(el).html();
+        });
+
+        var last_scroll = $(window).scrollTop();
+        $(window).scroll(function() {
+            var this_scroll = $(window).scrollTop();
+            console.log("This: " + this_scroll + " Last: " + last_scroll);
+            if (Math.abs(this_scroll - last_scroll) > 1) {
+                updateGradient();
+                last_scroll = this_scroll;
+            }
+        });
+        updateGradient();
+    </script>
+</body>
+</html>
