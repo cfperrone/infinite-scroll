@@ -5,12 +5,13 @@
  */
 
 var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
-  [255,128,0]);
+    [236,2,140], // Magenta *
+    [146,98,172], // Purple
+    [25,231,215], // Cyan *
+    [138,248,103], // Green
+    [254,242,0], // Yellow *
+    [247,129,64] // Orange
+);
 
 var step = 0;
 //color table indices for:
@@ -21,7 +22,7 @@ var step = 0;
 var colorIndices = [0,1,2,3];
 
 //transition speed
-var gradientSpeed = 0.02;
+var gradientSpeed = 0.04;
 
 function updateGradient()
 {
